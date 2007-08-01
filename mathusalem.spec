@@ -65,9 +65,11 @@ rm -f $RPM_BUILD_ROOT%{_libdir}/nautilus/extensions-1.0/*.la
 rm -rf $RPM_BUILD_ROOT
 
 %post
+/sbin/ldconfig
 %update_icon_cache hicolor
 
 %postun
+/sbin/ldconfig
 %update_icon_cache hicolor
 
 %files

@@ -3,7 +3,7 @@ Summary(pl.UTF-8):	Aplikacja GNOME do zarządzania długo działającymi zadania
 Name:		mathusalem
 Version:	0.0.4
 Release:	1
-License:	GPL
+License:	GPL v2+
 Group:		X11/Applications
 Source0:	http://www.student.montefiore.ulg.ac.be/~frecinau/tar/%{name}-%{version}.tar.bz2
 # Source0-md5:	f21c30ac72dc7c98808d8bc0ec8f1817
@@ -33,6 +33,9 @@ Summary:	mathusalem header files
 Summary(pl.UTF-8):	Pliki nagłówkowe mathusalem
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
+Requires:	dbus-glib-devel >= 0.60
+Requires:	gtk+2-devel >= 2:2.10.0
+Requires:	libnotify-devel >= 0.4.2
 
 %description devel
 mathusalem header files.

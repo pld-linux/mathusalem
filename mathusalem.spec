@@ -1,4 +1,5 @@
 Summary:	GNOME application to manage long running tasks
+Summary(pl.UTF-8):	Aplikacja GNOME do zarządzania długo działającymi zadaniami
 Name:		mathusalem
 Version:	0.0.4
 Release:	1
@@ -16,6 +17,7 @@ BuildRequires:	libnotify-devel >= 0.4.2
 BuildRequires:	nautilus-devel >= 2.10.0
 BuildRequires:	pkgconfig
 BuildRequires:	scrollkeeper >= 0.3.14
+Requires(post,postun):	/sbin/ldconfig
 Requires(post,postun):	gtk+2
 Requires(post,postun):	hicolor-icon-theme
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -23,22 +25,33 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Mathusalem, the upcoming long running task manager for GNOME.
 
+%description -l pl.UTF-8
+Mathusalem - zarządca długo działających zadań dla GNOME.
+
 %package devel
 Summary:	mathusalem header files
+Summary(pl.UTF-8):	Pliki nagłówkowe mathusalem
 Group:		X11/Development/Libraries
-Requires:	%{name}-libs = %{version}-%{release}
+Requires:	%{name} = %{version}-%{release}
 
 %description devel
 mathusalem header files.
 
+%description devel -l pl.UTF-8
+Pliki nagłówkowe mathusalem.
+
 %package -n nautilus-extension-mathusalem
 Summary:	mathusalem extension for Nautilus
+Summary(pl.UTF-8):	Rozszerzenie mathusalem dla Nautilusa
 Group:		X11/Applications
 Requires:	%{name} = %{version}-%{release}
 Requires:	nautilus >= 2.10.0
 
 %description -n nautilus-extension-mathusalem
 Shows task progress using mathusalem.
+
+%description -n nautilus-extension-mathusalem -l pl.UTF-8
+Rozszerzenie mathusalem dla Nautilusa.
 
 %prep
 %setup -q

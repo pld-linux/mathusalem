@@ -2,7 +2,7 @@ Summary:	GNOME application to manage long running tasks
 Summary(pl.UTF-8):	Aplikacja GNOME do zarządzania długo działającymi zadaniami
 Name:		mathusalem
 Version:	0.0.4
-Release:	1
+Release:	2
 License:	GPL v2+
 Group:		X11/Applications
 Source0:	http://www.student.montefiore.ulg.ac.be/~frecinau/tar/%{name}-%{version}.tar.bz2
@@ -18,7 +18,7 @@ BuildRequires:	nautilus-devel >= 2.10.0
 BuildRequires:	pkgconfig
 BuildRequires:	scrollkeeper >= 0.3.14
 Requires(post,postun):	/sbin/ldconfig
-Requires(post,postun):	gtk+2
+Requires(post,postun):	gtk-update-icon-cache
 Requires(post,postun):	hicolor-icon-theme
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
